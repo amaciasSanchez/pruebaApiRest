@@ -1,0 +1,501 @@
+{
+	"info": {
+		"_postman_id": "4072ad5c-544e-4b27-a9bd-dac8a8e50dbb",
+		"name": "pruebaApiRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "clientes",
+			"item": [
+				{
+					"name": "crearCliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"nombreCompleto\": \"Marianela Montalvo\",\n  \"genero\": \"FEMENINO\",\n  \"edad\": 0,\n  \"identificacion\": \"097548965\",\n  \"direccion\": \"Amazonas y NNUU\",\n  \"telefono\": \"097548965\",\n  \"clienteId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"contrasenia\": \"5678\",\n  \"estado\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8003/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8003/clientes/633e8fe5-9b20-4685-9814-9c7d4c1be5ce",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"clientes",
+								"633e8fe5-9b20-4685-9814-9c7d4c1be5ce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarClientesPorEstado",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8003/clientes/estado/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"clientes",
+								"estado",
+								"true"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarClientePorIdentificacion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8003/clientes/097548965",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"clientes",
+								"097548965"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarCliente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"4c31017b-c5e1-465f-89c7-101402c3683c\",\n  \"nombreCompleto\": \"Marianela Montalvo\",\n  \"genero\": \"FEMENINO\",\n  \"edad\": 0,\n  \"identificacion\": \"097548965\",\n  \"direccion\": \"Amazonas y NNUU -- -actua\",\n  \"telefono\": \"097548965\",\n  \"clienteId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"contrasenia\": \"5678\",\n  \"estado\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8003/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cuentas",
+			"item": [
+				{
+					"name": "crearCuenta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"numeroDeCuenta\": \"585545\",\n  \"identificacionCliente\": \"098254785\",\n  \"cliente\": \"Jose Lema\",\n  \"tipoCuenta\": \"AHORROS\",\n  \"saldoInicial\": 2000,\n  \"estado\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8003/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarCuentaPorNumero",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8003/cuentas/478758",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"cuentas",
+								"478758"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarCuentasPorEstado",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8003/cuentas/estado/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"cuentas",
+								"estado",
+								"true"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarCuenta",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"3e0a0863-110e-42ca-8219-694f0b483b19\",\n  \"numeroDeCuenta\": \"478758\",\n  \"identificacion\": \"098254785\",\n  \"cliente\": \"Jose Lema\",\n  \"tipoCuenta\": \"AHORROS\",\n  \"saldoInicial\": 2000,\n  \"estado\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8003/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaCuentasPorCliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8003/cuentas/cliente/098254785",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"cuentas",
+								"cliente",
+								"098254785"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarCuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8003/cuentas/3e0a0863-110e-42ca-8219-694f0b483b19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"cuentas",
+								"3e0a0863-110e-42ca-8219-694f0b483b19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movimientos",
+			"item": [
+				{
+					"name": "crearMovimiento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fecha\": \"2022-04-03T19:38:45.907Z\",\n  \"numeroDeCuenta\": \"585545\",\n  \"tipo\": \"DEPOSITO\",\n  \"estado\": true,\n  \"movimiento\": 100\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8003/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaMovimientosPorRangoFechas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8003/movimientos/2023-10-10/2023-10-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"movimientos",
+								"2023-10-10",
+								"2023-10-10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarMovimiento",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8003/movimientos/cabe0758-20e9-4091-947a-b698bcc9ffe1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"movimientos",
+								"cabe0758-20e9-4091-947a-b698bcc9ffe1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaMovimientosPorCliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8003/movimientos/cliente/098254785/2022-04-03/2022-04-03",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"movimientos",
+								"cliente",
+								"098254785",
+								"2022-04-03",
+								"2022-04-03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultaMovimientosPorNumeroDeCuenta",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8003/movimientos/cuenta/585545/2022-04-03/2022-04-03",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"movimientos",
+								"cuenta",
+								"585545",
+								"2022-04-03",
+								"2022-04-03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizaMovimiento",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json; charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": \"aaf0383d-8d2c-4c66-abb0-96b833375210\",\n        \"fecha\": \"2022-04-03T19:38:45.907+00:00\",\n        \"cliente\": \"Jose Lema\",\n        \"identificacionCliente\": \"098254785\",\n        \"numeroDeCuenta\": \"585545\",\n        \"tipo\": \"DEPOSITO\",\n        \"saldoInicial\": 2000.0,\n        \"estado\": true,\n        \"movimiento\": 100.0,\n        \"saldoDisponible\": 2100.0\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8003/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

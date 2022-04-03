@@ -1,0 +1,29 @@
+package com.nttdata.ws.prueba.constants;
+
+/**
+ * @author Angelica
+ *
+ */
+public interface MensajeDelSistema {
+	
+	String ERROR_INTERNO = "ALGO MALO OCURIO, LO SOLUCIONAREMOS PRONTO";
+	
+	String RECURSO_NO_ENCONTRADO = "EL RECURSO NO FUE ENCONTRADO";
+		
+	String INFO_204 = "NO HAY CONTENIDO";
+	
+	String FECHA_ERROR = "FORMATO DE FECHA INCORRECTO";
+	
+	String RECURSO_CREADO = "REGISTRO CREADO";
+	
+	String RECURSO_NO_CREADO = "EL REGISTRO NO PUDO SER CREADO";
+	
+	String RECURSO_ACTUALIZADO = "REGISTRO ACTUALIZADO";
+	
+	String RECURSO_ELIMINADO = "REGISTRO ELIMIDADO";
+	
+	String PROCESO_EXITOSO = "OK";
+	
+	
+
+}
