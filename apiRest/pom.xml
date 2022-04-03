@@ -12,7 +12,7 @@
 	<groupId>com.nttdata.ws.prueba</groupId>
 	<artifactId>nttdata-ws-prueba</artifactId>
 	<version>1.0.0</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>apiRest</name>
 	<description>Prueba Técnica A. Macias</description>
 	<properties>
