@@ -12,8 +12,8 @@
 	<groupId>com.nttdata.ws.prueba</groupId>
 	<artifactId>nttdata-ws-prueba</artifactId>
 	<version>1.0.0</version>
-	<packaging>war</packaging>
-	<name>apiRest</name>
+	<packaging>jar</packaging>
+	<name>nttdata-ws-prueba</name>
 	<description>Prueba Técnica A. Macias</description>
 	<properties>
 		<java.version>11</java.version>
