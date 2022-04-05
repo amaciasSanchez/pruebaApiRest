@@ -44,7 +44,6 @@ public class Persona {
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "genero")
-	@ColumnDefault(value = "NEUTRO")
 	private Genero genero;
 	
 	@Column(name = "edad")

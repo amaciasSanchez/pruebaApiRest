@@ -42,7 +42,6 @@ public class Cliente extends Persona implements Serializable{
 	private String contrasenia;
 	
 	@Column(name = "estado")
-	@ColumnDefault(value = "true")
 	private boolean estado;
 	
 	
